@@ -1,0 +1,11 @@
+Style/For:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Layout/LineLength:
+  Enabled: false
