@@ -8,8 +8,8 @@ FROM = /^\d{0,255}\.\d{0,255}\.\d{0,255}\.\d{0,255}/.freeze
 TO = %r{/\w+/\d+/\w+}.freeze
 
 def formatted_requests(logs)
-  logs.each_line.select { |line| line.match(/POST/) }.map do |l|
-    "#{l.scan(DATA)[0]} FROM: #{l.scan(FROM)[0][0]} TO: #{l.scan(TO)[0].to_s.upcase}"
+  logs.each_line.select { |line| line.match(/POST/) }.map do |line|
+    "#{line.scan(DATA)[0]} FROM: #{line.scan(FROM)[0][0]} TO: #{line.scan(TO)[0].to_s.upcase}"
   end
 end
 
