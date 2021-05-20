@@ -15,9 +15,12 @@ module MyEnumerable
 
   refine Array do
     def my_each
-      for i in 0...length
-        yield(self[i])
+      if block_given?
+        for i in 0...length
+          yield(self[i])
+        end
       end
+      self
     end
 
     def my_map
