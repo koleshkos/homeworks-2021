@@ -33,10 +33,13 @@ module MyEnumerable
 
     def my_select
       temp = []
-      for i in 0...length
-        temp << self[i] if yield(self[i])
+      if block_given?
+        for i in 0...length
+          temp << self[i] if yield(self[i])
+        end
+        return temp
       end
-      temp
+      self
     end
   end
 end
