@@ -25,10 +25,13 @@ module MyEnumerable
 
     def my_map
       temp = []
-      for i in 0...length
-        temp << yield(self[i])
+      if block_given?
+        for i in 0...length
+          temp << yield(self[i])
+        end
+        return temp
       end
-      temp
+      self
     end
 
     def my_select
