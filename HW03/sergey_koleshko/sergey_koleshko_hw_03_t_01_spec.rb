@@ -14,19 +14,19 @@ describe '.break_error' do
 
   context 'logs with error' do
     it 'should return string with error' do
-      expect(break_error(logs_with_error)).to eq ("2018-04-23 20:30:42: SSL error, peer: 10.6.246.101, peer cert: , #<Puma::MiniSSL::SSLError: System error: Undefined error: 0 - 0>")
+      expect(break_error(logs_with_error)).to eq('2018-04-23 20:30:42: SSL error, peer: 10.6.246.101, peer cert: , #<Puma::MiniSSL::SSLError: System error: Undefined error: 0 - 0>')
     end
   end
 
   context 'logs withot error' do
     it 'should return empty string' do
-      expect(break_error(logs_without_error)).to eq ('')
+      expect(break_error(logs_without_error)).to eq('')
     end
   end
 
   context 'logs empty' do
     it 'should return empty string' do
-      expect(break_error(logs_empty)).to eq ('')
+      expect(break_error(logs_empty)).to eq('')
     end
   end
 end

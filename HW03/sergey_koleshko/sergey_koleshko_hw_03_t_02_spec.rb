@@ -10,21 +10,21 @@ describe '.formatted_requests' do
 
   logs_empty = ''
 
-  context 'logs with post requests' do 
-    it 'should return array with information about requests' do 
-      expect(formatted_requests(logs_with_requests)).to eq (["23/Apr/2018:20:30:39 +0300 FROM: 1 TO: /TEST/2/MESSAGES", "23/Apr/2018:20:30:42 +0300 FROM: 1 TO: /TEST/2/RUN", "23/Apr/2018:20:31:39 +0300 FROM: 1 TO: /TEST/2/MESSAGES"])
+  context 'logs with post requests' do
+    it 'should return array with information about requests' do
+      expect(formatted_requests(logs_with_requests)).to eq(['23/Apr/2018:20:30:39 +0300 FROM: 1 TO: /TEST/2/MESSAGES', '23/Apr/2018:20:30:42 +0300 FROM: 1 TO: /TEST/2/RUN', '23/Apr/2018:20:31:39 +0300 FROM: 1 TO: /TEST/2/MESSAGES'])
     end
   end
 
   context 'logs without post requests' do
-    it 'should return empty array' do 
-      expect(formatted_requests(logs_without_requests)).to eq ([])
+    it 'should return empty array' do
+      expect(formatted_requests(logs_without_requests)).to eq([])
     end
   end
 
   context 'logs is empty' do
-    it 'should return empty array' do 
-      expect(formatted_requests(logs_empty)).to eq ([])
+    it 'should return empty array' do
+      expect(formatted_requests(logs_empty)).to eq([])
     end
   end
 end
