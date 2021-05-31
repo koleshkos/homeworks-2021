@@ -4,8 +4,8 @@ using MyEnumerable
 
 describe MyEnumerable do
   
-  empty_array = []
-  array = [0, 1, 2, 3, 4, 5]
+  let(:empty_array) { [] }
+  let(:array) { [0, 1, 2, 3, 4, 5] }
 
   # my_each
   context '#my_each' do
@@ -94,6 +94,5 @@ describe MyEnumerable do
         end
       end
     end
-
    end
 end
