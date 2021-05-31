@@ -1,10 +1,10 @@
 require_relative 'sergey_koleshko_hw_03_t_04'
 
 describe '.counter' do
-  str_with_digits = 'hel2!lo'
-  str_only_lettets = 'wicked .. !'
-  str_only_digits = '12345'
-  str_empty = ''
+  let(:str_with_digits) { 'hel2!lo' }
+  let(:str_only_lettets) { 'wicked .. !' }
+  let(:str_only_digits) { '12345' }
+  let(:str_empty) { '' }
 
   context 'string with digits' do
     it 'should return 5 letters and 1 digits' do
